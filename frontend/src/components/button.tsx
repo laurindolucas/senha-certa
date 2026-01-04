@@ -3,31 +3,38 @@ import Icon from "./icon";
 import Text from "./text";
 import { cva, type VariantProps } from "class-variance-authority";
 export const buttonVariants = cva(
-  "flex items-center justify-center cursor-pointer transition rounded-lg gap-2",
-  {
-    variants: {
-      variant: {
-        primary: `
+    "flex items-center justify-center cursor-pointer transition rounded-lg gap-2",
+    {
+        variants: {
+            variant: {
+                primary: `
           bg-[hsl(var(--card))]
           border border-[hsl(var(--border))]
           rounded-[var(--radius)]
           hover:bg-[hsl(var(--muted))]
-          active:bg-[hsl(190,100%,25%)]
+          active:bg-[hsl(214,89%,11%)]
         `,
-      },
-      size: {
-        md: "py-[1rem] px-[2rem]",
-      },
-      disabled: {
-        true: "opacity-50 pointer-events-none",
-      },
-    },
-    defaultVariants: {
-      variant: "primary",
-      size: "md",
-      disabled: false,
-    },
-  }
+                secondary: `
+         bg-[hsl(0,0%,100%)]
+          border border-[hsl(var(--border))]
+          rounded-[var(--radius)]
+          hover:bg-[hsl(0,0%,89%)]
+          active:bg-[hsl(216,2%,50%)]
+        `
+            },
+            size: {
+                md: "py-[1rem] px-[2rem]",
+            },
+            disabled: {
+                true: "opacity-50 pointer-events-none",
+            },
+        },
+        defaultVariants: {
+            variant: "primary",
+            size: "md",
+            disabled: false,
+        },
+    }
 );
 
 
